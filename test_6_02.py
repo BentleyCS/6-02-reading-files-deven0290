@@ -1,8 +1,10 @@
-print("=== toString ===")
-print(repr(toString("myText.txt")))
+from file_functions import toString, longestLine, toBinary
 
-print("\n=== longestLine ===")
-print(longestLine("myText.txt"))
+def test_toString():
+    assert toString("myText.txt") != ""
 
-print("\n=== toBinary ===")
-print(toBinary("myBinary.txt"))
+def test_longestLine():
+    assert longestLine("myText.txt") == "this line is the longest one in the file"
+
+def test_toBinary():
+    assert toBinary("myBinary.txt") == ['01101001', '00101010', '1010']
